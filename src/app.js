@@ -12,6 +12,7 @@ const forecast = require('./utils/forecast');
 
 
 const app = express();
+const port = process.env.PORT || 3000; 
 
 
 // setup path
@@ -116,8 +117,8 @@ app.get('*',(req,res)=>{
 
 // il server non è attualmente startato, dobbiamo accenderlo!
 
-app.listen(3000, () => { // 3000 è la porta di default
-    console.log('server is up on port 3000');
+app.listen(port, () => { // 3000 è la porta di default
+    console.log('server is up on port '+port);
 }); 
 
 
